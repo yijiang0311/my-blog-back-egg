@@ -1,7 +1,8 @@
 'use strict';
 
-module.exports = app => {
-  app.once('server', server => {
+module.exports = (app) => {
+  console.log('1234567898765432');
+  app.once('server', (server) => {
     console.log('server', server);
     // websocket
   });
@@ -10,11 +11,11 @@ module.exports = app => {
     // console.log(ctx);
     // report error
   });
-  app.on('request', ctx => {
+  app.on('request', (ctx) => {
     // console.log('ctx', ctx);
     // log receive request
   });
-  app.on('response', ctx => {
+  app.on('response', (ctx) => {
     // ctx.starttime is set by framework
     const used = Date.now() - ctx.starttime;
     console.log('used', used);

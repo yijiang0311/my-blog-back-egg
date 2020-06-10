@@ -1,3 +1,13 @@
 {
-  "extends": "eslint-config-egg"
+  "extends": "eslint-config-egg",
+  "rules": {
+    "space-before-function-paren": [
+      "warning",
+      {
+        "anonymous": "nevel",
+        "named": "always",
+        "asyncArrow": "nevel"
+      }
+    ]
+  }
 }
